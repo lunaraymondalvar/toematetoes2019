@@ -189,19 +189,42 @@ $(document).ready( () => {
 			});
 
 
+		// validation for negative input number
+
+	});
+
+	// delete button
+	$(document).on('click', '.item-remove', (e) => {
+		e.preventDefault();
+		e.stopPropagation();
+
+		let item_id = $(e.target).attr('data-id');
+
+		$.ajax({
+			"method": "POST",
+			"url":"../controllers/update_cart.php",
+			"data": {
+				'item_id':item_id,
+				'item_quantity':0
+			},
+
+			'beforeSend': () => {
+				return confirm("Are you sure you want to delete?");
+			},
+
+			"success": (data) => {
+				$(e.target).parents('tr').remove();
+				$('#card-count').html(data);
+				getTotal();
+				window.location.replace("../views/cart.php"); //same as for header, but its the one used for JS
+			}
+
+		});
+	
 	});
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 });
+
+
