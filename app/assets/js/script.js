@@ -119,6 +119,7 @@ $(document).ready( () => {
 				'username':username,
 				'password':password
 			},
+
 			"success":(data) => {
 				if(data == "login_failed") {
 					$("#username").next().html("Please provide correct credentials");
@@ -169,7 +170,7 @@ $(document).ready( () => {
 			let quantity = parseInt($(e.target).val());
 			let price = parseFloat($(e.target).parents('tr').find(".item_price").html());
 
-			subTotal = quantity * price;
+			let subTotal = quantity * price;
 			$(e.target).parents('tr').find('.item_subtotal').html(subTotal.toFixed(2));
 
 			getTotal();
@@ -189,42 +190,41 @@ $(document).ready( () => {
 			});
 
 
-		// validation for negative input number
 
 	});
 
-	// delete button
-	$(document).on('click', '.item-remove', (e) => {
+	//delete button
+	$(document).on("click", '.item-remove', (e) => {
 		e.preventDefault();
 		e.stopPropagation();
 
 		let item_id = $(e.target).attr('data-id');
 
 		$.ajax({
-			"method": "POST",
+			"method":"POST",
 			"url":"../controllers/update_cart.php",
 			"data": {
 				'item_id':item_id,
 				'item_quantity':0
 			},
-
-			'beforeSend': () => {
+			"beforeSend": () => {
 				return confirm("Are you sure you want to delete?");
 			},
-
 			"success": (data) => {
 				$(e.target).parents('tr').remove();
-				$('#card-count').html(data);
+				$("#cart-count").html(data);
 				getTotal();
-				window.location.replace("../views/cart.php"); //same as for header, but its the one used for JS
+				window.location.replace("../views/cart.php");
 			}
-
 		});
-	
 	});
 
 
+	//submit profile form updates
+	$('#update_info').click( ()=> {
+		// alert('hello');
+		$('#update_user_details').submit();
+	})
+
 
 });
-
-
