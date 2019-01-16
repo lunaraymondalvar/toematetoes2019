@@ -73,6 +73,8 @@ $(document).ready( () => {
 
 	}
 
+
+
 	$("#add_user").click( (e) => {
 		if(validate_registration_form()) {
 			let username = $("#username").val();
@@ -219,7 +221,6 @@ $(document).ready( () => {
 		});
 	});
 
-
 	//submit profile form updates
 	$('#update_info').click( ()=> {
 		// alert('hello');
@@ -228,3 +229,4 @@ $(document).ready( () => {
 
 
 });
+
