@@ -2,8 +2,9 @@
 <?php require_once '../partials/template.php'; ?>
 
 <?php function get_page_content() {
-
 	global $conn;
+
+	if((isset($_SESSION['user'])) && $_SESSION['user']['roles_id'] == 2) {
 ?>
 
 	<?php 
@@ -88,7 +89,9 @@
 	 	</div> <!-- end container -->
 	 </form> <!-- end form -->
 
-
+	 <?php } else {
+	header('Location: ./error.php');
+	} ?>
 
 
 <?php } ?>
