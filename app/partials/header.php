@@ -38,13 +38,21 @@
 						<a href="./items.php" class="nav-link">Items</a>
 					</li>
 
+					<li class="nav-item">
+						<a href="./orders.php" class="nav-link">Orders</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="./users.php" class="nav-link">Users</a>
+					</li>
+
 				<?php } ?>
 
 				<?php if(isset($_SESSION['user'])) { ?>
 
 				<li class="nav-item">
 					<a class="nav-link" href="./profile.php"> Welcome, <?php echo $_SESSION['user']['firstname']; ?> </a>
-				</li>
+				</li>			
 
 				<li class="nav-item">
 					<a class="nav-link" href="../controllers/logout.php"> Logout </a>
