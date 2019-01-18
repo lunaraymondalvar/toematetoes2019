@@ -164,8 +164,8 @@ function generate_new_transaction_number() {
 
 	    $redirectUrls = new RedirectUrls();
 	    $redirectUrls
-	        ->setReturnUrl('http://192.168.10.14/batch19/ecom/ecommerce-website/app/controllers/pay.php?success=true')
-	        ->setCancelUrl('http://192.168.10.14/batch19/ecom/ecommerce-website/app/controllers/pay.php?success=false');
+	        ->setReturnUrl('https://yourtoematetoes2019.herokuapp.com/app/controllers/pay.php?success=true')
+	        ->setCancelUrl('https://yourtoematetoes2019.herokuapp.com/app/controllers/pay.php?success=false');
 
 	    $payment = new Payment();
 	    $payment->setIntent('sale')
