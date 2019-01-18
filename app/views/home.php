@@ -5,7 +5,9 @@
 	<div class="container-fluid">
 		<div class="jumbotron bg-dark mt-3 text-center text-white">
 
-			<h1>YourToeMateToes</h1>
+			<img class="img-fluid" src="../assets/images/greenfeet.jpg">
+
+			<h1 class="my-4">YourToeMateToes</h1>
 			<p>Your friendly shoe store</p>
 	
 		</div> <!-- end jumbo -->
