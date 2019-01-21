@@ -1,0 +1,36 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.card-img-top {
+	height: 200px;
+	border: 2px solid black;
+}
+
+.card-footer {
+	margin-bottom: 30px;
+	border: 2px solid black;
+}
+
+.card-body {
+	border: 2px solid green;
+}
+
+#categoryheader {
+ margin-top: 20px;
+}
+
+.card {
+	margin-top: 20px;
+}
+
+#homeimage {
+	height: 620px;
+}
+
+input {
+	border: 2px solid black;
+}

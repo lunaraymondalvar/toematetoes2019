@@ -3,7 +3,7 @@
 <?php function get_page_content() { ?>
 
 	<div class="container-fluid">
-		<div class="jumbotron bg-dark mt-3 text-center text-white">
+		<div id="homeimage" class="jumbotron bg-dark my-3 text-center text-white">
 
 			<img class="img-fluid" src="../assets/images/greenfeet.jpg">
 

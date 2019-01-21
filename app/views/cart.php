@@ -60,7 +60,7 @@
 						<td class="text-right font-weight-bold" id="total_price">
 							<?php echo $cart_total; ?>
 						</td>
-
+						
 						<td class="text-center">
 							<a href="./checkout.php" class="btn btn-primary">Proceed to checkout</a>
 						</td>
