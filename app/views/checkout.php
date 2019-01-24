@@ -14,7 +14,7 @@
 
 	 ?>
 
-	 <h1>This is the checkout page</h1>
+	 <h1 class="text-center">This is the checkout page</h1>
 
 	 <form method="POST" action="../controllers/placeorder.php">
 	 	<div class="container mt-4">
@@ -79,6 +79,7 @@
 								<th colspan="2">Item Name</th>
 								<th>Item Price</th>
 								<th>Item Quantity</th>
+								<th>Item Image</th>
 								<th>Item Subtotal</th>
 							</tr>
 						</thead>
@@ -96,7 +97,11 @@
 							<td class="text-center" colspan="2"><?php echo $item['name']; ?></td> <!-- Item name -->
 							<td><?php echo $item['price']; ?></td> <!-- Item price -->
 							<td><?php echo $qty; ?></td> <!-- Item quantity -->
+							<td>
+								<img src="<?php echo $item['image_path']; ?>" class="img-fixed d-block">
+							</td>
 							<td><?php echo $qty * $item['price']; ?></td> <!-- Subtotal -->
+							
 						</tbody>
 						<?php } ?>
 					</table>

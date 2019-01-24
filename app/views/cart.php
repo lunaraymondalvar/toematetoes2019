@@ -19,6 +19,7 @@
 						<th>Item Name</th>
 						<th>Item Price</th>
 						<th>Item Quantity</th>
+						<th>Item Image</th>
 						<th>Item Subtotal</th>
 						<th>Actions</th>
 					</tr>
@@ -46,6 +47,9 @@
 							<td class="item_price text-center"> <?php echo $item['price']; ?></td>
 							<td class="item_quantity"> 
 								<input type="number" value="<?php echo $qty; ?>" class="form-control text-right" data-id="<?php echo $id; ?>" min="1" >
+							</td>
+							<td>
+								<img src="<?php echo $item['image_path']; ?>" class="img-fixed d-block">
 							</td>
 							<td class="item_subtotal text-center"> <?php echo $subTotal; ?></td>
 							<td class="item_action text-center">
